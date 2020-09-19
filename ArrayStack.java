@@ -21,7 +21,13 @@ public class ArrayStack<E> implements Stack<E>
      * the stack. TODO:  Throw a StackException if the stack is empty. 
      */
     public E peekTop(){
-return null;
+      if(isEmpty())
+       return null;
+      for(int i = stack.length-1; i >= 0; i--){
+        if(stack[i] != null)
+          return (E)stack[i];
+      }
+      return null;
     }
 
     /** 
@@ -46,6 +52,20 @@ return null;
      * Add the given value to the stack. 
      */
     public void push (E ob){
+     if (stack[stack.length-1] !=null){
+        int newlength = stack.length*2;
+        Object[] tempstack = new Object[newlength];
+        for (int i=0; i<stack.length; i++){                 tempstack[i] = stack[i];
+        }
+        stack = tempstack;
+      }
+       
 
+     for(int i = stack.length-1; i >= 0; i--){
+      if(stack[i] != null){
+        stack[i+1] = ob;
+        break;
+      }
+    }
     }
 }
