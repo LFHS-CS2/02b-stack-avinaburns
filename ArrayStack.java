@@ -9,8 +9,8 @@ public class ArrayStack<E> implements Stack<E>
  Object[] stack = new Object[100];
 
  public boolean isEmpty() {
-   for (int i=0; i<stack.length;i++){
-    if (stack[i]==null)
+   for(int i = 0; i <stack.length>; i++){
+    if (stack[i]!=null)
      return false;
  }
  return true;
