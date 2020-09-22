@@ -9,7 +9,7 @@ public class ArrayStack<E> implements Stack<E>
  Object[] stack = new Object[100];
 
  public boolean isEmpty() {
-   for(int i = 0; i <stack.length>; i++){
+   for(int i = 0; i <stack.length; i++){
     if (stack[i]!=null)
      return false;
  }
@@ -55,7 +55,8 @@ public class ArrayStack<E> implements Stack<E>
      if (stack[stack.length-1] !=null){
         int newlength = stack.length*2;
         Object[] tempstack = new Object[newlength];
-        for (int i=0; i<stack.length; i++){                 tempstack[i] = stack[i];
+        for (int i=0; i<stack.length; i++){ 
+          tempstack[i] = stack[i];
         }
         stack = tempstack;
       }
