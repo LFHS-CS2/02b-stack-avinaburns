@@ -2,7 +2,7 @@
  * ArrayStack should implement the Stack interface.
  * You should write your own test cases in ArrayStackTest
  *
- * @author (your name)
+ * @author Avina Burns
  */
 public class ArrayStack<E> implements Stack<E>
 {
