@@ -22,7 +22,7 @@ public class ArrayStackTest
 
   }
 @Test
-    public void test_isEmpty(Stack stack){
+    public void test_isEmpty(ArrayStack<Integer> stack){
       assertTrue("Should be empty", stack.isEmpty());
       stack.push(1);
       assertTrue("Should NOT be empty", !stack.isEmpty());
@@ -30,7 +30,7 @@ public class ArrayStackTest
     }
     
     @Test
-    public void test_peekTop(Stack stack){
+    public void test_peekTop(ArrayStack<Integer> stack){
       try{
         stack.peekTop(); //nothing in the stack
         fail("Should've thrown exception");
@@ -43,7 +43,7 @@ public class ArrayStackTest
     }
 
     @Test
-    public void test_pop(Stack stack){
+    public void test_pop(ArrayStack<Integer> stack){
       try{
         stack.pop(); //nothing in the stack
         fail("Should've thrown exception");
@@ -56,7 +56,7 @@ public class ArrayStackTest
     }
 
     @Test
-    public void test_push(Stack stack){
+    public void test_push(ArrayStack<Integer> stack){
       stack.push(2);
       assertTrue("Should return 2", (int)stack.peekTop()==2);
     }
