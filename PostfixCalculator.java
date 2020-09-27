@@ -8,7 +8,6 @@ public class PostfixCalculator extends ArrayStack
 /**
 * Methods 
 */
-  public int evaluate(String expression) {}
+    public int evaluate(String expression) {}
   public String toString(){}
-  public void operation(String sign){}
-}
+  }
